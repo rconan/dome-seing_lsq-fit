@@ -16,7 +16,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     })?;
 
     // LOAD KL DATA
-    let mut data = NpzReader::new(File::open("../kls.npz")?)?;
+    let mut data = NpzReader::new(File::open("data/kls.npz")?)?;
     println!("data: {:#?}", data.names()?);
 
     // Read KL modes in matrix [n_pupil_points X n_mode] (n_mode=675*7)
